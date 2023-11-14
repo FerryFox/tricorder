@@ -1,7 +1,14 @@
 import {Button, Typography} from "@mui/material";
 import {useState} from "react";
+import axios from "axios";
 
-export default function HomePage() {
+export default function HomePage()
+{
+    const callApi = () =>
+    {
+        axios.get("/api/gpt/test");
+    }
+
     const [count, setCount] = useState(0);
     return (
         <>
@@ -14,6 +21,10 @@ export default function HomePage() {
             <Typography>
                 {count}
             </Typography>
+
+            <Button onClick={callApi}>
+                fire api call
+            </Button>
         </>
     );
 }

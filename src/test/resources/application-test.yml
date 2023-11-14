@@ -1,0 +1,4 @@
+application:
+  security:
+    gpt:
+      secret-api-key: ${GPT_API_KEY}
